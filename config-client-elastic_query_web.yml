@@ -19,7 +19,7 @@ spring:
 
 user-config:
   username: test
-  #      password: springCloud_Pwd!
-  password: '{bcrypt}$2a864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
+  password: springCloud_Pwd!
+#  password: '{bcrypt}$2a864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
 #  password: '{cipher}864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
   roles: USER
