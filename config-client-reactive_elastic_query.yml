@@ -1,6 +1,6 @@
 elastic-query-service:
   backPressure-delay-ms: 500
-
+  #Adds a delay for each record and return it in chunks to the client
 elastic-config:
   index-name: twitter-index
   connection-url: http://localhost:9200
@@ -31,8 +31,10 @@ spring:
     base-path: /reactive-elastic-query-service
   codec:
     max-in-memory-size: 25MB
+    #    default above size is 260KB
   data:
     elasticsearch:
       client:
         reactive:
           max-in-memory-size: 25MB
+          #    default above size is 260KB
