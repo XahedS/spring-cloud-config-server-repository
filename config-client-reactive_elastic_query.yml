@@ -1,5 +1,14 @@
 elastic-query-service:
+  version: v1
   backPressure-delay-ms: 500
+
+server:
+  port: 8183
+  servlet:
+    context-path: /reactive-elastic-query-service
+
+elastic-query-config:
+  text-field: text
 
 elastic-config:
   index-name: twitter-index
@@ -7,24 +16,20 @@ elastic-config:
   connect-timeout-ms: 5000
   socket-timeout-ms: 30000
 
-elastic-query-config:
-  text-field: text
 
-kafka-config:
-  topic-name: twitter-analytics-topic-2
-  topic-names-to-create:
-    - twitter-analytics-topic-2
-  num-partitions: 3
-  replication-factor: 3
-  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
-  schema-registry-servers: http://localhost:8081
-  sleep-time-ms: 1000
-  max-interval-ms: 10000
-  retry-multiplier: 2.0
-  admin-retry-max: 1
+#kafka-config:
+#  topic-name: twitter-analytics-topic-2
+#  topic-names-to-create:
+#    - twitter-analytics-topic-2
+#  num-partitions: 3
+#  replication-factor: 3
+#  bootstrap-servers: localhost:19092, localhost:29092, localhost:39092
+#  schema-registry-servers: http://localhost:8081
+#  sleep-time-ms: 1000
+#  max-interval-ms: 10000
+#  retry-multiplier: 2.0
+#  admin-retry-max: 1
 
-server:
-  port: 8183
 
 spring:
   webflux:
@@ -36,3 +41,10 @@ spring:
       client:
         reactive:
           max-in-memory-size: 25MB
+
+
+user-config:
+  username: test
+  #      password: springCloud_Pwd!
+  password: '{cipher}864187498c1689c6845014ae2e538057aa7b374b5862a8604b183b5e61b23391d2cbb9b8c0118fa7039e048b3471eefe'
+  roles: USER

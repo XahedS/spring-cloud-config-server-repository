@@ -13,7 +13,7 @@ elastic-config:
   index-name: twitter-index
   connection-url: http://localhost:9200
   connect-timeout-ms: 5000
-  scoket-timeout-ms: 30000
+  socket-timeout-ms: 30000
 
 user-config:
   username: test
