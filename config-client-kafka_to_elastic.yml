@@ -41,3 +41,5 @@ elastic-config:
   connection-url: http://localhost:9200
   connect-timeout-ms: 5000
   scoket-timeout-ms: 30000
+
+
