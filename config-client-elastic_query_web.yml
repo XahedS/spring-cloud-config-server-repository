@@ -12,19 +12,19 @@ elastic-query-web-client:
     content-type: 'application/vnd.api.v1+json'
     accept-type: 'application/vnd.api.v1+json'
     #base url tells the base url the webclient will connect
-    base-url: 'http://localhost:8183/elastic-query-service/documents'
-#    base-url: 'http://elastic-query-service/elastic-query-service/documents' #Using hostname=elastic-query-service after load-balancing
+#    base-url: 'http://localhost:8183/elastic-query-service/documents'
+    base-url: 'http://elastic-query-service/elastic-query-service/documents' #Using hostname=elastic-query-service after load-balancing
     #Added service-id & instances part for running multiple elastic-query-service to be loadbalanced by spring-cloud-loadbalancer
     service-id: elastic-query-service
-    instances:
-      -
-        id: elastic-query-service-1
-        host: localhost
-        port: 8183
-      -
-        id: elastic-query-service-2
-        host: localhost
-        port: 8185
+#    instances:
+#      -
+#        id: elastic-query-service-1
+#        host: localhost
+#        port: 8183
+#      -
+#        id: elastic-query-service-2
+#        host: localhost
+#        port: 8185
   query-by-text:
     method: POST
     uri: "/get-document-by-text"
