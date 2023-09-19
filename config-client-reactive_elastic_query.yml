@@ -32,7 +32,7 @@ spring:
 #      cluster-name: es-twitter-cluster
       client:
         reactive:
-#          endpoints: localhost:9200
+          endpoints: localhost:9200
           max-in-memory-size: 25MB
 
 
