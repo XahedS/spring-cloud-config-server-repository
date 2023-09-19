@@ -1,6 +1,7 @@
 elastic-query-service:
   version: v1
   backPressure-delay-ms: 500
+
 server:
   port: 8183
   servlet:
@@ -28,8 +29,10 @@ spring:
     max-in-memory-size: 25MB
   data:
     elasticsearch:
+      cluster-name: es-twitter-cluster
       client:
         reactive:
+          endpoints: localhost:9200
           max-in-memory-size: 25MB
 
 
