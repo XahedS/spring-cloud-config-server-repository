@@ -42,7 +42,7 @@ spring:
     elasticsearch:
       client:
         reactive:
-          endpoints: localhost:9300
+#          endpoints: localhost:9300
           max-in-memory-size: 25MB
 
 
