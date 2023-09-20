@@ -12,7 +12,7 @@ elastic-query-config:
 
 elastic-config:
   index-name: twitter-index
-  connection-url: http://localhost:9255
+  connection-url: http://localhost:9200
   connect-timeout-ms: 5000
   socket-timeout-ms: 30000
 
@@ -42,7 +42,7 @@ spring:
     elasticsearch:
       client:
         reactive:
-#          endpoints: localhost:9300
+          endpoints: localhost:9200
           max-in-memory-size: 25MB
 
 
