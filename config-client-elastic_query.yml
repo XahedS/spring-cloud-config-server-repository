@@ -1,5 +1,6 @@
 elastic-query-service:
   version: v1
+  custom-audience: elastic-query-service
 
 server:
   port: 8183
@@ -29,3 +30,13 @@ springdoc:
 
 security:
   paths-to-ignore: /api-docs
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          #issuer-uri = path to microservices-realm created in keyclaok
+          issuer-uri: http://localhost:8081/auth/realms/microservices-realm
+          #jwk-set-uri =
+          jwk-set-uri: http://localhost:8081/auth/realms/microservices-realm/protocol/openid-connect/certs
